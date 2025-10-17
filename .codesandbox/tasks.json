@@ -1,0 +1,70 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "command": "pnpm install",
+      "name": "Installing Dependencies"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "build": {
+      "name": "build",
+      "command": "pnpm build"
+    },
+    "build:fast": {
+      "name": "build:fast",
+      "command": "pnpm build:fast"
+    },
+    "build:watch": {
+      "name": "build:watch",
+      "command": "pnpm build:watch"
+    },
+    "build:prod": {
+      "name": "build:prod",
+      "command": "pnpm build:prod"
+    },
+    "build:analyze": {
+      "name": "build:analyze",
+      "command": "pnpm build:analyze"
+    },
+    "clean": {
+      "name": "clean",
+      "command": "pnpm clean"
+    },
+    "dev": {
+      "name": "dev",
+      "command": "pnpm dev",
+      "runAtStart": true
+    },
+    "lint": {
+      "name": "lint",
+      "command": "pnpm lint"
+    },
+    "lint:fix": {
+      "name": "lint:fix",
+      "command": "pnpm lint:fix"
+    },
+    "ts-check": {
+      "name": "ts-check",
+      "command": "pnpm ts-check"
+    },
+    "start": {
+      "name": "start",
+      "command": "pnpm start"
+    },
+    "test": {
+      "name": "test",
+      "command": "pnpm test"
+    },
+    "test:cov": {
+      "name": "test:cov",
+      "command": "pnpm test:cov"
+    },
+    "watch": {
+      "name": "watch",
+      "command": "pnpm watch"
+    }
+  }
+}
