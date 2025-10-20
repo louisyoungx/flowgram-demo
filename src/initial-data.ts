@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: MIT
  */
 
-import { FlowDocumentJSON } from "./typings";
+import { FlowDocumentJSON } from './typings';
 
 export const initialData: FlowDocumentJSON = {
   nodes: [
     {
-      id: "start_0",
-      type: "start",
+      id: 'start_0',
+      type: 'start',
       meta: {
         position: {
           x: 181.33535069974707,
@@ -17,47 +17,47 @@ export const initialData: FlowDocumentJSON = {
         },
       },
       data: {
-        title: "Start",
+        title: 'Start',
         outputs: {
-          type: "object",
+          type: 'object',
           properties: {
             cities: {
-              type: "array",
+              type: 'array',
               extra: {
                 index: 0,
               },
               items: {
-                type: "string",
+                type: 'string',
               },
               default:
                 '[\n  "Beijing",\n  "Shanghai",\n  "Hangzhou",\n  "New York",\n  "London",\n  "Paris"\n]',
             },
             model_name: {
-              type: "string",
+              type: 'string',
               extra: {
                 index: 2,
               },
             },
             api_key: {
-              type: "string",
+              type: 'string',
               extra: {
                 index: 3,
               },
             },
             api_host: {
-              type: "string",
+              type: 'string',
               extra: {
                 index: 4,
               },
             },
           },
-          required: ["cities", "model_name", "api_key", "api_host"],
+          required: ['cities', 'model_name', 'api_key', 'api_host'],
         },
       },
     },
     {
-      id: "end_0",
-      type: "end",
+      id: 'end_0',
+      type: 'end',
       meta: {
         position: {
           x: 3712,
@@ -65,65 +65,65 @@ export const initialData: FlowDocumentJSON = {
         },
       },
       data: {
-        title: "End",
+        title: 'End',
         inputs: {
-          type: "object",
+          type: 'object',
           properties: {
             result: {
-              type: "string",
+              type: 'string',
             },
           },
         },
         inputsValues: {
           result: {
-            type: "ref",
-            content: ["440190", "result"],
+            type: 'ref',
+            content: ['440190', 'result'],
           },
         },
       },
     },
     {
-      id: "loop_CR9P_",
-      type: "loop",
+      id: 'loop_CR9P_',
+      type: 'loop',
       meta: {
         position: {
-          x: -204.87374918685543,
-          y: -197.4303892829262,
+          x: -168.33232465012654,
+          y: -138.40540728363717,
         },
       },
       data: {
-        title: "Loop_Cities",
+        title: 'Loop_Cities',
         loopFor: {
-          type: "ref",
-          content: ["start_0", "cities"],
+          type: 'ref',
+          content: ['start_0', 'cities'],
         },
         loopOutputs: {
           temperatures: {
-            type: "ref",
-            content: ["code_TYMaY", "temperature"],
+            type: 'ref',
+            content: ['code_TYMaY', 'temperature'],
           },
           outfits: {
-            type: "ref",
-            content: ["llm_4tfMh", "result"],
+            type: 'ref',
+            content: ['llm_4tfMh', 'result'],
           },
         },
         outputs: {
-          type: "object",
+          type: 'object',
           required: [],
           properties: {
             temperatures: {
-              type: "array",
+              type: 'array',
             },
             outfits: {
-              type: "array",
+              type: 'array',
             },
           },
         },
       },
       blocks: [
         {
-          id: "block_start_Qy2kJ",
-          type: "block-start",
+          id: 'block_start_Qy2kJ',
+          type: 'block-start',
           meta: {
             position: {
               x: 737,
@@ -133,8 +133,8 @@ export const initialData: FlowDocumentJSON = {
           data: {},
         },
         {
-          id: "block_end_ascT4",
-          type: "block-end",
+          id: 'block_end_ascT4',
+          type: 'block-end',
           meta: {
             position: {
               x: 2889,
@@ -144,8 +144,8 @@ export const initialData: FlowDocumentJSON = {
           data: {},
         },
         {
-          id: "condition_hsMZW",
-          type: "condition",
+          id: 'condition_hsMZW',
+          type: 'condition',
           meta: {
             position: {
               x: 2429,
@@ -153,31 +153,31 @@ export const initialData: FlowDocumentJSON = {
             },
           },
           data: {
-            title: "Condition",
+            title: 'Condition',
             conditions: [
               {
                 value: {
                   left: {
-                    type: "ref",
-                    content: ["code_TYMaY", "temperature"],
+                    type: 'ref',
+                    content: ['code_TYMaY', 'temperature'],
                   },
-                  operator: "gt",
+                  operator: 'gt',
                   right: {
-                    type: "constant",
+                    type: 'constant',
                     content: 20,
                     schema: {
-                      type: "number",
+                      type: 'number',
                     },
                   },
                 },
-                key: "if_J58vJ",
+                key: 'if_J58vJ',
               },
             ],
           },
         },
         {
-          id: "continue_YmaO7",
-          type: "continue",
+          id: 'continue_YmaO7',
+          type: 'continue',
           meta: {
             position: {
               x: 2889,
@@ -185,12 +185,12 @@ export const initialData: FlowDocumentJSON = {
             },
           },
           data: {
-            title: "Continue_1",
+            title: 'Continue_1',
           },
         },
         {
-          id: "167372",
-          type: "comment",
+          id: '167372',
+          type: 'comment',
           meta: {
             position: {
               x: 1049.0000000000005,
@@ -202,12 +202,12 @@ export const initialData: FlowDocumentJSON = {
               width: 214.43992303301346,
               height: 80,
             },
-            note: "Get the weather of city",
+            note: 'Get the weather of city',
           },
         },
         {
-          id: "909285",
-          type: "comment",
+          id: '909285',
+          type: 'comment',
           meta: {
             position: {
               x: 1509,
@@ -219,12 +219,12 @@ export const initialData: FlowDocumentJSON = {
               width: 214.43992303301346,
               height: 80,
             },
-            note: "Parse string to JSON",
+            note: 'Parse string to JSON',
           },
         },
         {
-          id: "399663",
-          type: "comment",
+          id: '399663',
+          type: 'comment',
           meta: {
             position: {
               x: 1968.9999999999998,
@@ -236,12 +236,12 @@ export const initialData: FlowDocumentJSON = {
               width: 214.43992303301346,
               height: 80,
             },
-            note: "Give direct, concise clothing suggestions based on weather",
+            note: 'Give direct, concise clothing suggestions based on weather',
           },
         },
         {
-          id: "group_fRJTc",
-          type: "group",
+          id: 'group_fRJTc',
+          type: 'group',
           meta: {
             position: {
               x: 705,
@@ -249,15 +249,15 @@ export const initialData: FlowDocumentJSON = {
             },
           },
           data: {
-            color: "Indigo",
-            title: "Group_1",
-            parentID: "loop_CR9P_",
-            blockIDs: ["http_cFiha", "code_TYMaY", "llm_4tfMh"],
+            color: 'Indigo',
+            title: 'Group_handle_data',
+            parentID: 'loop_CR9P_',
+            blockIDs: ['http_cFiha', 'code_TYMaY', 'llm_4tfMh'],
           },
         },
         {
-          id: "http_cFiha",
-          type: "http",
+          id: 'http_cFiha',
+          type: 'http',
           meta: {
             position: {
               x: 344,
@@ -265,28 +265,28 @@ export const initialData: FlowDocumentJSON = {
             },
           },
           data: {
-            title: "HTTP_Weather",
+            title: 'HTTP_Weather',
             api: {
-              method: "GET",
+              method: 'GET',
               url: {
-                type: "template",
-                content: "https://wttr.in/{{loop_CR9P__locals.item}}?format=j1",
+                type: 'template',
+                content: 'https://wttr.in/{{loop_CR9P__locals.item}}?format=j1',
               },
             },
             body: {
-              bodyType: "none",
+              bodyType: 'none',
             },
             outputs: {
-              type: "object",
+              type: 'object',
               properties: {
                 body: {
-                  type: "string",
+                  type: 'string',
                 },
                 headers: {
-                  type: "object",
+                  type: 'object',
                 },
                 statusCode: {
-                  type: "integer",
+                  type: 'integer',
                 },
               },
             },
@@ -297,8 +297,8 @@ export const initialData: FlowDocumentJSON = {
           },
         },
         {
-          id: "code_TYMaY",
-          type: "code",
+          id: 'code_TYMaY',
+          type: 'code',
           meta: {
             position: {
               x: 804,
@@ -306,43 +306,43 @@ export const initialData: FlowDocumentJSON = {
             },
           },
           data: {
-            title: "Code_ParseTemp",
+            title: 'Code_ParseTemp',
             inputsValues: {
               weather: {
-                type: "ref",
-                content: ["http_cFiha", "body"],
+                type: 'ref',
+                content: ['http_cFiha', 'body'],
                 extra: {
                   index: 0,
                 },
               },
             },
             script: {
-              language: "javascript",
+              language: 'javascript',
               content:
                 "// Here, you can retrieve input variables from the node using 'params' and output results using 'ret'.\n// 'params' has been correctly injected into the environment.\n// Here's an example of getting the value of the parameter named 'input' from the node input:\n// const input = params.input;\n// Here's an example of outputting a 'ret' object containing multiple data types:\n// const ret = { \"name\": 'Xiaoming', \"hobbies\": [\"Reading\", \"Traveling\"] };\n\nasync function main({ params }) {\n  // Build the output object\n  const data = JSON.parse(params.weather)\n  const temperature = Number(data.current_condition[0].temp_C)\n  const ret = {\n    temperature,\n  };\n\n  return ret;\n}",
             },
             outputs: {
-              type: "object",
+              type: 'object',
               properties: {
                 temperature: {
-                  type: "number",
+                  type: 'number',
                 },
               },
               required: [],
             },
             inputs: {
-              type: "object",
+              type: 'object',
               properties: {
                 weather: {
-                  type: "string",
+                  type: 'string',
                 },
               },
             },
           },
         },
         {
-          id: "llm_4tfMh",
-          type: "llm",
+          id: 'llm_4tfMh',
+          type: 'llm',
           meta: {
             position: {
               x: 1264,
@@ -350,76 +350,69 @@ export const initialData: FlowDocumentJSON = {
             },
           },
           data: {
-            title: "LLM_outfit",
+            title: 'LLM_outfit',
             inputsValues: {
               modelName: {
-                type: "ref",
-                content: ["start_0", "model_name"],
+                type: 'ref',
+                content: ['start_0', 'model_name'],
               },
               apiKey: {
-                type: "ref",
-                content: ["start_0", "api_key"],
+                type: 'ref',
+                content: ['start_0', 'api_key'],
               },
               apiHost: {
-                type: "ref",
-                content: ["start_0", "api_host"],
+                type: 'ref',
+                content: ['start_0', 'api_host'],
               },
               temperature: {
-                type: "constant",
+                type: 'constant',
                 content: 0.5,
               },
               systemPrompt: {
-                type: "template",
+                type: 'template',
                 content:
-                  "You are a fashion advisor. Give direct, concise clothing suggestions based on weather. No\n  explanations.",
+                  'You are a fashion advisor. Give direct, concise clothing suggestions based on weather. No\n  explanations.',
               },
               prompt: {
-                type: "template",
-                content:
-                  "{{loop_CR9P__locals.item}} {{code_TYMaY.temperature}}°C",
+                type: 'template',
+                content: '{{loop_CR9P__locals.item}} {{code_TYMaY.temperature}}°C',
               },
             },
             inputs: {
-              type: "object",
-              required: [
-                "modelName",
-                "apiKey",
-                "apiHost",
-                "temperature",
-                "prompt",
-              ],
+              type: 'object',
+              required: ['modelName', 'apiKey', 'apiHost', 'temperature', 'prompt'],
               properties: {
                 modelName: {
-                  type: "string",
+                  type: 'string',
                 },
                 apiKey: {
-                  type: "string",
+                  type: 'string',
                 },
                 apiHost: {
-                  type: "string",
+                  type: 'string',
                 },
                 temperature: {
-                  type: "number",
+                  type: 'number',
                 },
                 systemPrompt: {
-                  type: "string",
+                  type: 'string',
                   extra: {
-                    formComponent: "prompt-editor",
+                    formComponent: 'prompt-editor',
                   },
                 },
                 prompt: {
-                  type: "string",
+                  type: 'string',
                   extra: {
-                    formComponent: "prompt-editor",
+                    formComponent: 'prompt-editor',
                   },
                 },
               },
             },
             outputs: {
-              type: "object",
+              type: 'object',
               properties: {
                 result: {
-                  type: "string",
+                  type: 'string',
                 },
               },
             },
@@ -428,36 +421,36 @@ export const initialData: FlowDocumentJSON = {
       ],
       edges: [
         {
-          sourceNodeID: "block_start_Qy2kJ",
-          targetNodeID: "http_cFiha",
+          sourceNodeID: 'block_start_Qy2kJ',
+          targetNodeID: 'http_cFiha',
         },
         {
-          sourceNodeID: "condition_hsMZW",
-          targetNodeID: "block_end_ascT4",
-          sourcePortID: "if_J58vJ",
+          sourceNodeID: 'condition_hsMZW',
+          targetNodeID: 'block_end_ascT4',
+          sourcePortID: 'if_J58vJ',
         },
         {
-          sourceNodeID: "llm_4tfMh",
-          targetNodeID: "condition_hsMZW",
+          sourceNodeID: 'llm_4tfMh',
+          targetNodeID: 'condition_hsMZW',
         },
         {
-          sourceNodeID: "condition_hsMZW",
-          targetNodeID: "continue_YmaO7",
-          sourcePortID: "else",
+          sourceNodeID: 'condition_hsMZW',
+          targetNodeID: 'continue_YmaO7',
+          sourcePortID: 'else',
         },
         {
-          sourceNodeID: "http_cFiha",
-          targetNodeID: "code_TYMaY",
+          sourceNodeID: 'http_cFiha',
+          targetNodeID: 'code_TYMaY',
         },
         {
-          sourceNodeID: "code_TYMaY",
-          targetNodeID: "llm_4tfMh",
+          sourceNodeID: 'code_TYMaY',
+          targetNodeID: 'llm_4tfMh',
         },
       ],
     },
     {
-      id: "440190",
-      type: "llm",
+      id: '440190',
+      type: 'llm',
       meta: {
         position: {
           x: 3256,
@@ -465,78 +458,78 @@ export const initialData: FlowDocumentJSON = {
         },
       },
       data: {
-        title: "LLM_Advisor",
+        title: 'LLM_Advisor',
         inputsValues: {
           modelName: {
-            type: "ref",
-            content: ["start_0", "model_name"],
+            type: 'ref',
+            content: ['start_0', 'model_name'],
           },
           apiKey: {
-            type: "ref",
-            content: ["start_0", "api_key"],
+            type: 'ref',
+            content: ['start_0', 'api_key'],
           },
           apiHost: {
-            type: "ref",
-            content: ["start_0", "api_host"],
+            type: 'ref',
+            content: ['start_0', 'api_host'],
           },
           temperature: {
-            type: "constant",
+            type: 'constant',
             content: 0.5,
           },
           systemPrompt: {
-            type: "template",
+            type: 'template',
             content:
-              "You are a travel advisor. Based on weather and clothing comfort, recommend the best city to\n  visit with one sentence.",
+              'You are a travel advisor. Based on weather and clothing comfort, recommend the best city to\n  visit with one sentence.',
           },
           prompt: {
-            type: "template",
+            type: 'template',
             content:
-              "Given these cities with temperatures and clothing suggestions:\n<Cities>\n  {{start_0.cities}}\n</Cities>\n\n<Temperatures>\n  {{loop_CR9P_.temperatures}}\n</Temperatures>\n\n<outfits>\n  {{loop_CR9P_.outfits}}\n</outfits>\n\nWhich city is most comfortable for travel? Return only city name and reason.",
+              'Given these cities with temperatures and clothing suggestions:\n<Cities>\n  {{start_0.cities}}\n</Cities>\n\n<Temperatures>\n  {{loop_CR9P_.temperatures}}\n</Temperatures>\n\n<outfits>\n  {{loop_CR9P_.outfits}}\n</outfits>\n\nWhich city is most comfortable for travel? Return only city name and reason.',
           },
         },
         inputs: {
-          type: "object",
-          required: ["modelName", "apiKey", "apiHost", "temperature", "prompt"],
+          type: 'object',
+          required: ['modelName', 'apiKey', 'apiHost', 'temperature', 'prompt'],
           properties: {
             modelName: {
-              type: "string",
+              type: 'string',
             },
             apiKey: {
-              type: "string",
+              type: 'string',
             },
             apiHost: {
-              type: "string",
+              type: 'string',
             },
             temperature: {
-              type: "number",
+              type: 'number',
             },
             systemPrompt: {
-              type: "string",
+              type: 'string',
               extra: {
-                formComponent: "prompt-editor",
+                formComponent: 'prompt-editor',
               },
             },
             prompt: {
-              type: "string",
+              type: 'string',
               extra: {
-                formComponent: "prompt-editor",
+                formComponent: 'prompt-editor',
               },
             },
           },
         },
         outputs: {
-          type: "object",
+          type: 'object',
           properties: {
             result: {
-              type: "string",
+              type: 'string',
             },
           },
         },
       },
     },
     {
-      id: "316938",
-      type: "comment",
+      id: '316938',
+      type: 'comment',
       meta: {
         position: {
           x: 3256,
@@ -548,30 +541,30 @@ export const initialData: FlowDocumentJSON = {
           width: 261.60708060422826,
           height: 113.41006994627716,
         },
-        note: "Based on weather and clothing comfort, recommend the best city to visit.",
+        note: 'Based on weather and clothing comfort, recommend the best city to visit.',
       },
     },
   ],
   edges: [
     {
-      sourceNodeID: "start_0",
-      targetNodeID: "loop_CR9P_",
+      sourceNodeID: 'start_0',
+      targetNodeID: 'loop_CR9P_',
     },
     {
-      sourceNodeID: "440190",
-      targetNodeID: "end_0",
+      sourceNodeID: '440190',
+      targetNodeID: 'end_0',
     },
     {
-      sourceNodeID: "loop_CR9P_",
-      targetNodeID: "440190",
+      sourceNodeID: 'loop_CR9P_',
+      targetNodeID: '440190',
     },
   ],
   globalVariable: {
-    type: "object",
+    type: 'object',
     required: [],
     properties: {
       userId: {
-        type: "string",
+        type: 'string',
       },
     },
   },
